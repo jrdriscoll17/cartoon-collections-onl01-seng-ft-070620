@@ -4,7 +4,7 @@ end
 
 def summon_captain_planet(array)
   cap_array = []
-  cap_array = array.each{|element| element[0] = element[0].upcase} 
+  cap_array = array.each{|element| element[0] = element[0].upcase}
   cap_array_with_exclamation = cap_array.each{|element| element << "!"}
 end
 
@@ -15,10 +15,6 @@ end
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
   cheese_types.each do |element|
-    if array.include?(element)
-      return element
-    else
-      return nil
-    end
+    array.include?(element) ? element : nil
   end
 end
